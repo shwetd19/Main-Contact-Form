@@ -8,27 +8,6 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { useState } from "react";
 
 const App = () => {
-  const [showBrochureInputBox, setShowBrochureInputBox] = useState(false);
-  const [showCallInputBox, setShowCallInputBox] = useState(false);
-  const [showConsultationInputBox, setShowConsultationInputBox] =
-    useState(false);
-
-  const handleInputBox = (inputBoxType) => {
-    if (inputBoxType === "brochure") {
-      setShowBrochureInputBox(true);
-      setShowCallInputBox(false);
-      setShowConsultationInputBox(false);
-    } else if (inputBoxType === "call") {
-      setShowBrochureInputBox(false);
-      setShowCallInputBox(true);
-      setShowConsultationInputBox(false);
-    } else if (inputBoxType === "consultation") {
-      setShowBrochureInputBox(false);
-      setShowCallInputBox(false);
-      setShowConsultationInputBox(true);
-    }
-  };
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -228,85 +207,20 @@ const App = () => {
                   )}
                 </div>
               </div>
-              <div className="col-lg-4 col-md-5 d-flex align-items-stretch">
+              <div className="col-lg-4 col-md-5 d-flex align-items-stretch ">
                 <div className="info-wrap bg-primary w-100 p-md-5 p-4">
                   <h3>Let's get in touch</h3>
-                  <div className="white-box">
-                    <p className="mb-4">
+                  <div className="white-box ">
+                    <p className="mb-4 ">
                       We're open for any suggestion or just to have a chat
                     </p>
+                    <p className="mb-4">I saw something I like.</p>
                     <p className="mb-4">
-                      I saw something I like.
-                      <div className="checks">
-                        <button
-                          className={
-                            showBrochureInputBox
-                              ? "nav-link active"
-                              : "nav-link"
-                          }
-                          onClick={() => handleInputBox("brochure")}
-                        >
-                          Request Brochure.
-                        </button>
-                        {showBrochureInputBox && (
-                          <div>
-                            <input
-                              type="text"
-                              name="username"
-                              className="form-control"
-                              placeholder="Enter Email"
-                            />
-                          </div>
-                        )}
-                      </div>
+                      I’m not quite sure about what I want. Schedule Call
                     </p>
                     <p className="mb-4">
-                      I’m not quite sure about what I want.
-                      <div className="checks">
-                        <button
-                          className={
-                            showCallInputBox ? "nav-link active" : "nav-link"
-                          }
-                          onClick={() => handleInputBox("call")}
-                        >
-                          Schedule Call
-                        </button>
-                        {showCallInputBox && (
-                          <div>
-                            <input
-                              type="text"
-                              name="username"
-                              className="form-control"
-                              placeholder="Enter Contact"
-                            />
-                          </div>
-                        )}
-                      </div>
-                    </p>
-                    <p className="mb-4">
-                      This is your free 30-minute consultation pass.
-                      <div className="checks">
-                        <button
-                          className={
-                            showConsultationInputBox
-                              ? "nav-link active"
-                              : "nav-link"
-                          }
-                          onClick={() => handleInputBox("consultation")}
-                        >
-                          Enter email
-                        </button>
-                        {showConsultationInputBox && (
-                          <div>
-                            <input
-                              type="text"
-                              name="username"
-                              className="form-control"
-                              placeholder="Enter Email"
-                            />
-                          </div>
-                        )}
-                      </div>
+                      This is your free 30-minute consultation
+                      pass. Enter email.
                     </p>
                   </div>
                 </div>

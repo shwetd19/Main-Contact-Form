@@ -1,11 +1,9 @@
 .white-box {
-  /* display: inline-block;
-  background-color: #ffffff;
-  border: 1px solid black;
-  line-height: 14px;
-  padding: 0; */
-  /* font-size: 14px; */
   text-decoration-color: #ffffff;
   color: #ffffff;
   font-weight: 500;
+}
+ 
+.checks{
+  color: black;
 }
